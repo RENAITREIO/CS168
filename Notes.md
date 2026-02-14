@@ -93,13 +93,39 @@ properties of a link
 - bandwidth-delay product: bandwidth x delay  
     "capacity" of the link
 
-packet delay = packet size / bandwidth + propagation delay
-
 overloaded links
 - transient overload  
     maintain a queue of packets
 - persistent overload
-    drop packets
+    drop packets  
+    upgrade router or tell the sender to slow down
+
+packet delay = transmission delay(packet size / bandwidth) + propagation delay + queuing delay
+
+## Routing
+### Principle
+full-mesh topology doesn't scale well, but high bandwidth  
+single-link topology  
+network graph is constantly changing  
+routing protocols is distributed
+
+- intra-domain routing protocols(interior gateway protocols(IGPs))
+- inter-domain routing protocols(exterior gateway protocols(EGPs))
+    the Internet use BGP
+
+in pratice, the lines between intra and inter are blurred
+
+destination-based forwarding  
+depend on the destination field of the packet  
+router keeps a mapping table
+
+forwarding(deliver packets) vs. routing(fill tables)
+
+a global routing state is valid if and only if there are no dead ends and no loops
+
+directd delivery tree  
+oriented spanning tree
+
 
 
 
