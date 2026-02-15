@@ -117,7 +117,7 @@ in pratice, the lines between intra and inter are blurred
 
 destination-based forwarding  
 depend on the destination field of the packet  
-router keeps a mapping table
+router keeps a forwarding table
 
 forwarding(deliver packets) vs. routing(fill tables)
 
@@ -126,8 +126,25 @@ a global routing state is valid if and only if there are no dead ends and no loo
 directd delivery tree  
 oriented spanning tree
 
+least-cost routing
 
+some table entries can be hard-coded(no routing protocols needed)
 
+static routes
+
+### Distance-Vector
+routing and forwarding are opposite
+
+distance-vector protocol rule
+1. Bellman-Ford updates(distributed and asynchronous)  
+    advertising or announcing in routing
+2. updates from next-hop  
+    topology can change  
+    steady-state occurs when the network has converged
+3. resending
+4. expiring
+5. poisoning expired routes
+6. 
 
 
 
