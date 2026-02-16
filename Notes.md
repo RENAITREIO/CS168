@@ -148,6 +148,7 @@ distance-vector protocol rule
 
 
 
+
 disc01  
 ping, traceroute and dig  
 ip time-to-live(TTL)  
